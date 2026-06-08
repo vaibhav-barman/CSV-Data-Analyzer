@@ -1,5 +1,6 @@
-import streamlit as st 
-import pandas as pd
+import streamlit as st # import streamlit
+import pandas as pd # import pandas
+import plotly.express as px # import plotly
 
 st.title("CSV Data Analyzer")
 
@@ -50,3 +51,23 @@ if uploaded_file is not None:
     st.subheader("Statistical Summary")
 
     st.dataframe(df.describe())
+
+
+    st.subheader("Data Visualization") 
+
+    numeric_cols = df.select_dtypes(include="number").columns # select numeric columns
+
+    # Create column selector
+    selected_col = st.selectbox(
+        "Select a numeric column",
+        numeric_cols
+    ) 
+
+    # Create Histogram
+    fig = px.histogram(
+        df,
+        x=selected_col,
+        title=f"Distribution of {selected_col}"
+    )
+
+    st.plotly_chart(fig)
