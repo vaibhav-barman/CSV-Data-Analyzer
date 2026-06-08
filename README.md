@@ -47,7 +47,6 @@ CSV-Data-Analyzer/
 │   ├── outlier_detection.png
 │   ├── scatter_plot_analysis.png
 │   └── statistical_summary.png
-│
 ├── app.py
 ├── requirements.txt
 ├── README.md
@@ -59,7 +58,7 @@ CSV-Data-Analyzer/
 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/vaibhav-barman/CSV-Data-Analyzer
 cd csv-data-analyzer
 ```
 
@@ -97,13 +96,38 @@ streamlit run app.py
 
 ## Screenshots
 
-Add screenshots of:
+### Dataset Overview
 
-* Dataset Overview
-* Data Quality Report
-* Histogram Visualization
-* Scatter Plot Analysis
-* Outlier Detection
+![Dataset Overview](example_screenshots/dataset_overview.png)
+
+### Statistical Summary
+
+![Statistical Summary](example_screenshots/statistical_summary.png)
+
+### Data Visualization
+
+![Data Visualization](example_screenshots/data_visualization.png)
+
+### Correlation Analysis
+
+![Correlation Analysis](example_screenshots/correlation_heatmap.png)
+
+### Scatter Plot Analysis
+
+![Scatter Plot Analysis](example_screenshots/scatter_plot_analysis.png)
+
+### Outlier Detection
+
+![Outlier Detection](example_screenshots/outlier_detection.png)
+
+### Dataset Filtering
+
+![Dataset Filtering](example_screenshots/filtering_dataset.png)
+
+### Dataset Export
+
+![Dataset Export](example_screenshots/download_dataset_button.png)
+
 
 ## Future Improvements
 
