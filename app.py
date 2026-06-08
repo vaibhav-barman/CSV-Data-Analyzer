@@ -46,3 +46,7 @@ if uploaded_file is not None:
     st.dataframe(dtypes)
 
     st.write(df.head())
+
+    st.subheader("Statistical Summary")
+
+    st.dataframe(df.describe())
