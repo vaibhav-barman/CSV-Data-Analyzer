@@ -71,3 +71,17 @@ if uploaded_file is not None:
     )
 
     st.plotly_chart(fig)
+
+
+    # Correlation Heatmap
+    if len(numeric_cols) > 1:
+
+        st.subheader("Correlation Heatmap")
+
+        corr = df.corr(numeric_only=True)
+        st.dataframe(corr)
+        
+    else:
+        st.info(
+            "Correlation analysis requires at least 2 numeric columns."
+        )
