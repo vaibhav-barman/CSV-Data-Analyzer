@@ -80,8 +80,41 @@ if uploaded_file is not None:
 
         corr = df.corr(numeric_only=True)
         st.dataframe(corr)
-        
+
     else:
         st.info(
             "Correlation analysis requires at least 2 numeric columns."
         )
+
+
+    # Scatter Plot
+    st.subheader("Scatter Plot Analysis")
+
+    if len(numeric_cols) >= 2:
+        col1, col2 = st.columns(2)
+
+        with col1:
+            x_axis = st.selectbox(
+                "Select X Axis",
+                numeric_cols,
+                key="x_axis"
+            )
+
+        with col2:
+            y_axis = st.selectbox(
+                "Select Y Axis",
+                numeric_cols,
+                key="y_axis"
+            )
+
+        scatter_fig = px.scatter(
+            df,
+            x=x_axis,
+            y=y_axis,
+            title=f"{y_axis} vs {x_axis}"
+        )
+
+        st.plotly_chart(scatter_fig)
+
+    else:
+        st.info("Scatter plot requires at least 2 numeric columns.")
