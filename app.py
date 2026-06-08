@@ -136,3 +136,16 @@ if uploaded_file is not None:
     )
 
     st.plotly_chart(box_fig)
+
+
+    # Dataset Filtering
+    st.subheader("Filter Datasets")
+
+    rows_to_show = st.slider(
+        "Number of rows to display",
+        5, # min
+        100, # max
+        10 # default
+    )
+
+    st.dataframe(df.head(rows_to_show))
