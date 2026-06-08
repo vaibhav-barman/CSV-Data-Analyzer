@@ -2,6 +2,12 @@
 
 A Streamlit-based web application for performing Exploratory Data Analysis (EDA) on CSV datasets.
 
+## Live Demo
+
+🚀 Try the application here:
+
+https://csv-data-analyzer-by-vaibhav-barman.streamlit.app/
+
 ## Features
 
 * Upload and analyze CSV files
