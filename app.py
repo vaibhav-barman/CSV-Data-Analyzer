@@ -149,3 +149,14 @@ if uploaded_file is not None:
     )
 
     st.dataframe(df.head(rows_to_show))
+
+
+    # Download Cleaned Dataset
+    csv = df.to_csv(index=False)
+
+    st.download_button(
+        label="Download Dataset",
+        data=csv,
+        file_name="analyzed_dataset.csv",
+        mime="text/csv"
+    )
