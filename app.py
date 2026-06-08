@@ -118,3 +118,21 @@ if uploaded_file is not None:
 
     else:
         st.info("Scatter plot requires at least 2 numeric columns.")
+
+
+    # Box Plot (Outlier Detection)
+    st.subheader("Outlier Detection")
+
+    box_col = st.selectbox(
+        "Select Column for Outlier Analysis",
+        numeric_cols,
+        key="boxplot"
+    )
+
+    box_fig = px.box(
+        df,
+        y=box_col,
+        title=f"Outlier Analysis - {box_col}"
+    )
+
+    st.plotly_chart(box_fig)
