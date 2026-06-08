@@ -40,11 +40,20 @@ https://csv-data-analyzer-by-vaibhav-barman.streamlit.app/
 
 ```text
 CSV-Data-Analyzer/
+├── example_screenshots/
+│   ├── correlation_heatmap.png
+│   ├── data_visualization.png
+│   ├── dataset_overview.png
+│   ├── download_dataset_button.png
+│   ├── filtering_dataset.png
+│   ├── outlier_detection.png
+│   ├── scatter_plot_analysis.png
+│   └── statistical_summary.png
 │
 ├── app.py
 ├── requirements.txt
 ├── README.md
-└── screenshots/
+└── .gitignore
 ```
 
 ## Installation
