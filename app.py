@@ -29,4 +29,20 @@ if uploaded_file is not None:
     with col4:
         st.metric("Duplicate Rows", df.duplicated().sum())
 
+    st.subheader("Data Quality Report")
+
+    st.write("Missing Values Per Column")
+
+    missing_values = df.isnull().sum().reset_index()
+    missing_values.columns = ["Column", "Missing Values"]
+
+    st.dataframe(missing_values)
+
+    st.write("Data Types")
+
+    dtypes = df.dtypes.reset_index()
+    dtypes.columns = ["Column", "Data Type"]
+
+    st.dataframe(dtypes)
+
     st.write(df.head())
