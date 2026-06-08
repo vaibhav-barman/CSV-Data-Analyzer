@@ -160,3 +160,14 @@ if uploaded_file is not None:
         file_name="analyzed_dataset.csv",
         mime="text/csv"
     )
+
+    # Sidebar Navigation
+    page = st.sidebar.selectbox(
+        "Navigation",
+        [
+            "Overview",
+            "Data Quality",
+            "Statistics",
+            "Visualizations"
+        ]
+    )
